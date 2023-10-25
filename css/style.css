@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-inter;
+    }
+    nav {
+        @apply fixed bg-[#401408] w-screen md:py-5 md:px-5 lg:py-[39px] lg:px-[139px] z-10;
+    }
+}
+
+@layer components{
+    /* Navbar Class */
+    .navbar {
+        @apply flex justify-between items-center py-5 px-4 text-white;
+    }
+    .logo {
+        @apply w-[50px] md:w-[99px];
+    }
+    .navbar_menu {
+        @apply hidden md:flex items-center gap-16;
+    }
+    .navbar_link {
+        @apply text-base font-medium leading-7;
+    }
+    .contact_button {
+        @apply hidden md:block bg-white py-[17px] px-[35px] text-[#401408] text-sm font-bold leading-7;
+    }
+    .menu {
+        @apply text-base cursor-pointer md:hidden;
+    }
+
+    /* Overlay Class */
+    .overlay {
+        @apply fixed w-52 h-screen bg-[#401408] -left-full top-0 z-50 md:hidden duration-300 py-5 px-4;
+    }
+    .navbar_menuOverlay {
+        @apply flex flex-col gap-5 text-white mt-10;
+    }
+    .contact_buttonOverlay {
+        @apply absolute bottom-5 md:hidden bg-white py-[17px] px-[35px] text-[#401408] text-sm font-bold leading-7;
+    }
+
+    /* Hero Class */
+    .hero {
+        @apply bg-[#401408] w-full px-4 pb-12 md:px-5 lg:px-[139px] pt-16 md:pt-36 lg:pt-60 lg:pb-[170px] relative;
+    }
+    .heroContainer {
+        @apply flex flex-col justify-center items-center gap-5 lg:grid lg:grid-cols-12;
+    }
+    .heroContainer2 {
+        @apply flex flex-col text-white gap-5 lg:col-span-4 lg:w-[500px];
+    }
+
+    /* Brand Class */
+    .brand {
+        @apply px-4 py-14 lg:mx-auto lg:pt-[109px] lg:pb-[169px] flex flex-wrap md:flex-row lg:flex-row items-center justify-center gap-3 md:gap-6;
+    }
+
+    /* Price Class */
+    .price {
+        @apply px-4 md:px-24 pb-24 lg:pb-[200px] lg:px-[137px];
+    }
+
+}
